@@ -15,7 +15,6 @@
         function makePutRequest() {
             const apiUrl = 'https://myunityapi.azurewebsites.net/api/Tap/1';
             const requestBody = '"1"'; // Ensure the quotes are included
-            console.log(requestBody)
             fetch(apiUrl, {
                 method: 'PUT',
                 headers: {
@@ -34,7 +33,7 @@
                 // Handle the response data here if needed
             })
             .catch(error => {
-                console.error('There was a problem with the PUT request:', error);
+                console.error(requestBody+'There was a problem with the PUT request:', error);
                 alert(`Error during PUT request: ${error.message}`);
             });
         }
