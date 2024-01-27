@@ -1,0 +1,24 @@
+body {
+  background: #2F4F4F;
+  color: #fff;
+  padding: 25px;
+  font-family: sans-serif;
+}
+
+h1 {
+  font-family: courier new;
+  color: #FFDAB9;
+  font-size: 100px;
+}
+
+button {
+  font-family: courier new;
+  color: #2F4F4F;
+  background: #FFDAB9;
+  border-radius: 12px;
+  padding: 32px 32px;
+  font-size: 40px;
+  border: 2px solid #2F4F4F;
+  box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2), 0 6px 20px 0 rgba(0,0,0,0.19);
+}
+
