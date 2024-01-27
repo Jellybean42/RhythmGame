@@ -11,7 +11,7 @@
     
   <center><button onclick="makePutRequest()" type="button">BEAT</button><center>
    
-   <script>
+  <script>
         function makePutRequest() {
             const apiUrl = 'https://myunityapi.azurewebsites.net/api/Tap/1';
             const requestBody = '"1"';
@@ -27,9 +27,6 @@
                     throw new Error(`Network response was not ok. Status: ${response.error} - ${response.statusText}`);
                 }
                 return response.text();
-            })
-            .then(data => {
-                alert('PUT request successful!');
             })
             .catch(error => {
                 console.error('There was a problem with the PUT request:', error);
