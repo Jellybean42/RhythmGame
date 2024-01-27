@@ -18,9 +18,9 @@
             fetch(apiUrl, {
                 method: 'PUT',
                 headers: {
-                    'Content-Type': 'text/plain', // Set the content type to text/plain
+                    'Content-Type': 'text/plain',
                 },
-                body: requestBody.toJSON(),
+                body: requestBody(),
             })
             .then(response => {
                 if (!response.ok) {
@@ -30,7 +30,6 @@
             })
             .then(data => {
                 alert('PUT request successful!');
-                // Handle the response data here if needed
             })
             .catch(error => {
                 console.error('There was a problem with the PUT request:', error);
