@@ -28,9 +28,6 @@
                 }
                 return response.text();
             })
-            .then(data => {
-                alert('PUT request successful!');
-            })
             .catch(error => {
                 console.error('There was a problem with the PUT request:', error);
                 alert(`Error during PUT request: ${error.message}`);
