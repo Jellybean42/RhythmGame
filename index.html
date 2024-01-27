@@ -1,39 +1,27 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Button Website</title>
+  <title>Rhythm Game</title>
+  <meta name="viewport" content="width=device-width,initial-scale=1" >
+  <link href="style.css" rel="stylesheet">
 </head>
 <body>
-
-    <h1>Welcome to My Website</h1>
-    
-    <button onclick="makePutRequest()">Click me</button>
-
-    <script>
-        function makePutRequest() {
-            const apiUrl = 'https://myunityapi.azurewebsites.net/api/Tap/1';
-            const requestBody = '"1"';
-            fetch(apiUrl, {
-                method: 'PUT',
-                headers: {
-                    'Content-Type': 'application/json',
-                },
-                body: requestBody,
-            })
-            .then(response => {
-                if (!response.ok) {
-                    throw new Error(`Network response was not ok. Status: ${response.error} - ${response.statusText}`);
-                }
-                return response.text();
-            })
-            .catch(error => {
-                console.error('There was a problem with the PUT request:', error);
-                alert(`Error during PUT request: ${error.message}`);
-            });
-        }
-    </script>
-
+  <center><h1>RHYTHM GAME</h1><center>
+    <br><br><br><br><br><br>
+    <a href="play1.html">
+  <center><button type="button">Player 1</button><center></a>
+    <br>
+    <a href="play2.html">
+    <center><button type="button">Player 2</button><center></a>
+      <br>
+      <a href="play3.html">
+      <center><button type="button">Player 3</button><center></a>
+        <br>
+        <a href="play4.html">
+        <center><button type="button">Player 4</button><center></a>
+      
+   
+   
+  <script src="script.js"></script>
 </body>
 </html>
