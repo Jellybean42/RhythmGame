@@ -14,18 +14,17 @@
     <script>
         function makePutRequest() {
             const apiUrl = 'https://myunityapi.azurewebsites.net/api/Tap/1';
-            const requestBody = '"4"';
+            const requestBody = '"1"';
             fetch(apiUrl, {
                 method: 'PUT',
                 headers: {
                     'Content-Type': 'text/plain', // Set the content type to text/plain
                 },
-                body: requestBody,
+                body: requestBody.toJSON(),
             })
             .then(response => {
                 if (!response.ok) {
-                    throw new Error(requestBody+`Network response was not ok. Status: ${requestBody} - ${response.statusText}`);
-                    alert('requestBody');
+                    throw new Error(`Network response was not ok. Status: ${response.error} - ${response.statusText}`);
                 }
                 return response.text();
             })
@@ -34,7 +33,7 @@
                 // Handle the response data here if needed
             })
             .catch(error => {
-                console.error(requestBody+'There was a problem with the PUT request:', error);
+                console.error('There was a problem with the PUT request:', error);
                 alert(`Error during PUT request: ${error.message}`);
             });
         }
