@@ -14,12 +14,12 @@
     <script>
         function makePutRequest() {
             const apiUrl = 'https://myunityapi.azurewebsites.net/api/Tap/1';
-            const requestBody = "\"1\"";
+            const requestBody = '"1"'; // Ensure the quotes are included
 
             fetch(apiUrl, {
                 method: 'PUT',
                 headers: {
-                    'Content-Type': 'text/plain',
+                    'Content-Type': 'text/plain', // Set the content type to text/plain
                 },
                 body: requestBody,
             })
@@ -40,5 +40,5 @@
         }
     </script>
 
-</body>  
+</body>
 </html>
