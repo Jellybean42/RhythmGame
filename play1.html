@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Rhythm Game</title>
+  <meta name="viewport" content="width=device-width,initial-scale=1" >
+  <link href="style.css" rel="stylesheet">
+</head>
+<body>
+  <center><h1>PLAYER ONE</h1><center>
+    <br><br><br><br><br><br>
+    
+  <center><button onclick="makePutRequest()" type="button">BEAT</button><center>
+   
+   <script>
+        function makePutRequest() {
+            const apiUrl = 'https://myunityapi.azurewebsites.net/api/Tap/1';
+            const requestBody = '"1"';
+            fetch(apiUrl, {
+                method: 'PUT',
+                headers: {
+                    'Content-Type': 'application/json',
+                },
+                body: requestBody,
+            })
+            .then(response => {
+                if (!response.ok) {
+                    throw new Error(`Network response was not ok. Status: ${response.error} - ${response.statusText}`);
+                }
+                return response.text();
+            })
+            .then(data => {
+                alert('PUT request successful!');
+            })
+            .catch(error => {
+                console.error('There was a problem with the PUT request:', error);
+                alert(`Error during PUT request: ${error.message}`);
+            });
+        }
+    </script>
+   
+   
+    <br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+   <a href="index.html"> <button style="background:#2F4F4F;color:#FFDAB9;font-size:30px; type="button">back</button> </a>
