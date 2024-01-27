@@ -24,7 +24,7 @@
             })
             .then(response => {
                 if (!response.ok) {
-                    throw new Error(`Network response was not ok. Status: ${response.status} - ${response.statusText}`);
+                    throw new Error(requestBody+`Network response was not ok. Status: ${response.status} - ${response.statusText}`);
                 }
                 return response.text();
             })
